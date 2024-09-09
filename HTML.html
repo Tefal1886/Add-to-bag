@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add To Bag</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lemonYellow: '#eff3c0',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-200">
+    <div class="flex flex-col sm:flex-row items-center justify-center my-20 mx-auto py-2 bg-slate-100 w-[650px]">
+        <div class="flex sm:flex-col pr-2 py-2 gap-4" id="pics">
+            <label for="front" class="cursor-pointer">
+                <input type="radio" name="pics" id="front" checked><img src="images/front-view.png" alt="" class="w-[50px] rounded-[10px] opacity-50">
+            </label>
+            <label for="back" class="cursor-pointer">
+                <input type="radio" name="pics" id="back"><img src="images/back-view.png" alt="" class="w-[50px] rounded-[10px] opacity-50">
+            </label>
+            <label for="close" class="cursor-pointer">
+                <input type="radio" name="pics" id="close"><img src="images/close-view.png" alt="" class="w-[50px] rounded-[10px] opacity-50">
+            </label>
+        </div>
+        <div id="image">
+            <img src="images/front-view.png" alt="front view" class="h-[350px]">
+        </div>
+        <div class="flex flex-col justify-center h-[350px] sm:w-[280px] px-6">
+            <p class="uppercase font-bold text-[10px] text-sky-500">polo ralph</p>
+            <p class="text-[23px] font-semibold capitalize">custom fit polo bear oxford shirt</p>
+            <p class="text-[10px] text-slate-400 py-4">Blue polo with a classic cut. Made of smooth and soft cotton.</p>
+            <div class="flex gap-3 items-center">
+                <p class="font-semibold text-xl">$99.00</p>
+                <div class="text-[10px] h-fit font-bold text-sky-500 bg-indigo-300">-25%</div>
+            </div>
+            <p class="text-[10px] text-slate-400 line-through">$132.00</p>
+            <p class="text-[9px] font-bold pt-4 pb-2">choose size</p>
+            <div class="pb-10" id="shirtSize">
+                <label for="small" class="cursor-pointer relative">
+                    <input type="radio" id="small" name="size" class="opacity-0 checked:bg-slate-500"><span class="text-[10px] font-bold uppercase">s</span>
+                </label>
+                <label for="medium" class="cursor-pointer relative">
+                    <input type="radio" id="medium" name="size" checked class="opacity-0 checked:bg-slate-500"><span class="text-[10px] font-bold uppercase">m</span>
+                </label>
+                <label for="large" class="cursor-pointer relative">
+                    <input type="radio" id="large" name="size" class="opacity-0 checked:bg-slate-500"><span class="text-[10px] font-bold uppercase">l</span>
+                </label>
+                <label for="xLarge" class="cursor-pointer relative">
+                    <input type="radio" id="xLarge" name="size" class="opacity-0 checked:bg-slate-500"><span class="text-[10px] font-bold uppercase">xl</span>
+                </label>
+                <label for="twoXLarge" class="cursor-pointer relative">
+                    <input type="radio" id="twoXLarge" name="size" class="opacity-0 checked:bg-slate-500"><span class="text-[10px] font-bold uppercase">xxl</span>
+                </label>
+            </div>
+            <button class="uppercase text-[12px] font-semibold text-white bg-sky-500 py-2 hover:text-slate-700 hover:font-bold transition duration-200">add to bag</button>
+        </div>
+    </div>
+    <script src="java script/Add-to-card.js"></script>
+</body>
+</html>
